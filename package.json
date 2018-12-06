@@ -11,7 +11,8 @@
     "eslint": "^4.2.0",
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-prettier": "^2.1.2",
-    "prettier": "^1.5.2"
+    "prettier": "^1.5.2",
+    "marko-devtools": "^1.0.2"
   },
   "dependencies": {
     "marko": "^4.2.4",
@@ -20,7 +21,8 @@
   "scripts": {
     "start": "marko-starter server",
     "build": "NODE_ENV=production marko-starter build",
-    "serve-static": "NODE_ENV=production marko-starter serve-static",
+    "build-prod": "LASSO_TIMEOUT=200000 NODE_ENV=production npm run build",
+    "serve-static": "marko-starter serve-static",
     "lint": "eslint src/",
     "test": "npm run lint",
     "prettier": "prettier src/**/*.{js,css,less} *.js --write"

@@ -1,0 +1,11 @@
+class {
+  onImageSelected() {
+    this.emit('imageSelected');
+  }
+}
+
+<img.picture
+  on-click('onImageSelected')
+  src='./1.jpg' />
+
+<p>${input.image[1]}</p>

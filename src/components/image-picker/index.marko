@@ -1,0 +1,22 @@
+import getImages from './util/getImages';
+
+class {
+  onInput(input) {
+    var images = input.images || getImages();
+
+    this.state = {
+      currentImage: images[0],
+      images
+    };
+  }
+
+  onImageSelected(image) {
+    this.state.currentImage = image;
+  }
+}
+
+<div>
+  <default-header title='Teste'/>
+  <current-image image=state.currentImage/>
+  <grid-images images=state.images on-imageSelected('onImageSelected')/>
+</div>

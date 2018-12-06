@@ -50,3 +50,33 @@ Learn to create components that can be passed content and include that content i
 
 Learn how to use styles within a component and how to use resources (like images) in a component.
 
+
+### Start
+Precisa instalar marko-cli, com ele da para criar projetos com 'marko create seuNomeDeProjeto'
+
+npm install marko-cli --global
+
+Para rodar apenas 'npm start'
+
+- Sintaxe
+
+Ele tem uma sintaxe resumida, mas não é obrigatória.
+
+- Organizaçao de arquivos
+
+É possível escrever css/html/js no mesmo arquivo, mas nao é obrigatório
+index.marko
+style.css
+component.js
+
+- Rotas
+
+Elas sao simples, e feitas basicamente através de hierarquia de pastas, iniciando com a pasta routes.
+O nome da pasta será por default o nome da rota.
+Nessa pasta é obrigatório haver o arquivo index.marko ou o arquivo route.js.
+Para alterar defaults e tals, é só utilizar o route.js
+
+- Componentizaçao
+
+É organizado em pastas, é possível criar componentes na pasta src/components, sendo que cada componente pode ter sua própria pasta de componentes, que serao visíveis apenas para ele mesmo.
+É possível criar componentes também dentro da pasta routes.
